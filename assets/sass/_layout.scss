@@ -37,9 +37,14 @@ header {
     z-index: 101;
   }
 
+  button {
+    max-height: $vertical-rhythm * 17;
+    box-shadow: -40px 40px 50px -40px rgba(33, 33, 33, 1);
+  }
+  
   img {
-    max-height: $vertical-rhythm * 25;
-    box-shadow: -50px 50px 40px -50px rgba(33, 33, 33, 1);
+    max-height: $vertical-rhythm * 17;
+    box-shadow: -40px 40px 50px -40px rgba(33, 33, 33, 1);
   }
 
   h1 {
