@@ -25,7 +25,7 @@ body {
   justify-content: space-between;
   min-height: 100vh;
   color: $black;
-  font-family: $font-body;
+  font-family: $font-header;
   line-height: $base-line-height;
 }
 
@@ -38,11 +38,15 @@ header {
   }
 
   img {
-    max-height: $vertical-rhythm * 6;
+    max-height: $vertical-rhythm * 25;
+    box-shadow: -50px 50px 40px -50px rgba(33, 33, 33, 1);
   }
 
   h1 {
     font-family: $font-body;
+    font-weight: 700;
+    padding-top: $vertical-rhythm * 2;
+    text-transform: uppercase;
   }
 }
 

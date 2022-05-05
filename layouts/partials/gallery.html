@@ -1,4 +1,4 @@
-<section class="gallery" id="work">
+<section class="gallery" id="exhibit">
   <div class="row">
 
     <!-- First 4 characters of each gallery page's unique ID -->
@@ -8,7 +8,7 @@
     {{ end }}
 
     {{ $galleryTotal := len (where .Site.RegularPages "Section" "gallery") }}
-    {{ $galleryReverse := (where .Site.RegularPages.Reverse "Section" "gallery") }}
+    {{ $galleryReverse := (where .Site.RegularPages "Section" "gallery") }}
 
     <!-- If gallery is an odd total -->
     {{ if not (modBool $galleryTotal 2) }}

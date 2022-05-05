@@ -6,7 +6,7 @@
     <main>
 
       <!-- About -->
-      {{ partial "about.html" . }}
+      <!-- {{ partial "about.html" . }} -->
 
       <!-- Gallery -->
       {{ if not (eq (len (where .Site.RegularPages "Section" "gallery")) 0) }}
@@ -14,9 +14,9 @@
       {{ end }}
 
       <!-- Blog -->
-      {{ if not (eq (len (where .Site.RegularPages "Section" "blog")) 0) }}
+      <!-- {{ if not (eq (len (where .Site.RegularPages "Section" "blog")) 0) }}
         {{ partial "blog.html" . }}
-      {{ end }}
+      {{ end }} -->
 
       <!-- Contact -->
       {{ partial "contact.html" . }}
