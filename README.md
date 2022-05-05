@@ -28,14 +28,14 @@ In the root of your Hugo site directory run:
 
 ```console
 $ cd themes
-$ git clone https://github.com/tomanistor/osprey.git
+$ git clone https://github.com/s6muel/osprey.git
 ```
 
 ### Option 2: Create Submodule
 Create a submodule linked directly to the theme's GitHub repository in order to receive updates:
 
 ```console
-$ git submodule add https://github.com/tomanistor/osprey.git themes/osprey
+$ git submodule add https://github.com/s6muel/osprey.git themes/osprey
 ```
 
 Then run:
