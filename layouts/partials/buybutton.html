@@ -12,8 +12,14 @@
   <option value="Gold">Gold</option>
 </select>
 -->
+
+<!-- modal ID
+    data-item-id="{{ .Site.Params.item_url }}#modal-{{ .Scratch.Get "$modalID" }}"
+ -->
+
 <button class="snipcart-add-item mainmodal"
-    data-item-id="{{ .URL }}/#modal-{{ .Scratch.Get "$modalID" }}"
+
+    data-item-id="{{ .Site.Params.item_url }}"
     data-item-name="{{ .Params.alt }}"
     data-item-price="{{ .Params.price }}"
     data-item-url="{{ .Permalink }}"
