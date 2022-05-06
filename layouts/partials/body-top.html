@@ -11,12 +11,6 @@
       <div class="row middle-xs center-xs">
         <div class="col-xs-12">
           <!-- {{ .Site.Params.latestPurchaseLink }} goes here -->
-          <img {{ if .Site.Params.lazyLoading }}data-src="{{ .Site.Params.latestCover }}" lazyload="on"{{ else }}src="{{ .Site.Params.latestCover }}"{{ end }} alt="{{ .Site.Title }}" class="home-logo {{ if .Site.Params.lazyLoading }}lazyload{{ end }}">
-        </div>
-      </div>
-      <div class="row middle-xs center-xs">
-        <div class="col-xs-12">
-          <h1>{{ .Site.Params.latest }}</h1>
           <button class="snipcart-add-item buy-button"
             data-item-id="{{ .Site.Params.item_id }}"
             data-item-price="{{ .Site.Params.item_price }}"
@@ -24,8 +18,15 @@
             data-item-description="{{ .Site.Params.item_description }}"
             data-item-image="{{ .Site.Params.latestCover }}"
             data-item-name="{{ .Site.Params.item_name }}">
-              Buy Now
+              <img {{ if .Site.Params.lazyLoading }}data-src="{{ .Site.Params.latestCover }}" lazyload="on"{{ else }}src="{{ .Site.Params.latestCover }}"{{ end }} alt="{{ .Site.Title }}" class="home-logo {{ if .Site.Params.lazyLoading }}lazyload{{ end }}">
           </button>
+
+        </div>
+      </div>
+      <div class="row middle-xs center-xs">
+        <div class="col-xs-12">
+          <h1>{{ .Site.Params.latest }}</h1>
+
         </div>
       </div>
     </div>
