@@ -48,13 +48,13 @@ nav {
   width: 100%;
   height: $vertical-rhythm * 2;
   background-color: $white;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .4);
   text-align: center;
 
   h3 {
     margin: 0;
     font-family: $font-body;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
   }
@@ -90,7 +90,7 @@ nav {
   width: 100vw;
   height: 100%;
   transform: translate(0, 0);
-  transition: .25s ease-out;
+  transition: .6s ease-out;
   background-color: $black;
 
   a {
@@ -135,7 +135,7 @@ h3 {
   margin-bottom: $vertical-rhythm;
 //  font-family: $font-header;
   font-family: $font-body;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 2px;
   line-height: 1.45;
 
@@ -223,6 +223,9 @@ time {
   width: 100%;
   padding-bottom: $vertical-rhythm * 2;
   background-color: $smoke;
+  box-shadow: 0 100px 1px rgba(0, 0, 0, .4);
+  border-shadow: 0 100px 1px rgba(0, 0, 0, .4);
+
 
   form {
     margin-top: $vertical-rhythm;
@@ -256,16 +259,23 @@ input {
   border-color: $smoke;
   background-color: $white;
   color: $black;
+  border: none;
 
   &[type="submit"] {
-    transition: .2s ease-out;
-    background-color: $storm;
-    color: $white;
+    transition: .4s ease-out;
+    background-color: $smoke;
+    color: $black;
+    padding: 10px;
+    width: 15% !important;
 
+    align: center !important;
     &:hover {
-      background-color: $accent;
+      background-color: $black;
+      border: none;
+      border-radius: 8px;
       color: $white;
       cursor: pointer;
+      //box-shadow: 0 4px 12px rgba(0, 0, 0, .4);
     }
   }
 }
@@ -274,4 +284,67 @@ textarea {
   @extend input;
   min-height: $vertical-rhythm * 4;
   overflow: auto;
+}
+
+.main {
+  font-family: $font-header;
+  border-radius: 8px;
+  background-color: $white;
+  color: black;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  //font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $black;
+    color: $smoke;
+    transition-duration: 0.8s;
+    border-radius: 8px;
+  }
+}
+
+.snipcart-header {
+  display: flex;
+  z-index: 3;
+  height: 96px;
+  width: 96px;
+  position: fixed;
+  bottom: 20px;
+  right: 32px;
+  border-radius: 100px;
+  //background-color: $accent;
+  //background-color: transparentize($white, 1);
+  text-align: center;
+  font-size: $vertical-rhythm * 0.5;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .4);
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  transition: .25s;
+
+
+  &:hover {
+    //max-width: 15%;
+    //max-width: 15%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .7);
+  }
+
+}
+
+.bag {
+  object-fit:scale-down;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.snipcart {
+  background-color: $black;
 }

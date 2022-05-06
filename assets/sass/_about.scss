@@ -5,8 +5,16 @@
   p {
     @include size(h3);
     margin-top: $vertical-rhythm;
+    text-align: center;
+    font-style: italic;
   }
 
+h1 {
+    font-family: $font-header !important;
+    font-weight: 600;
+    text-decoration: none;
+    font-style: normal;
+}
   a {
     background-image: linear-gradient($accent, $accent);
     background-repeat: repeat-x;

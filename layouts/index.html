@@ -4,8 +4,7 @@
   <body>
     {{ partial "body-top" . }}
     <main>
-      <!-- About -->
-      <!-- {{ partial "about.html" . }} -->
+
 
       <!-- Gallery -->
       {{ if not (eq (len (where .Site.RegularPages "Section" "gallery")) 0) }}
@@ -17,12 +16,15 @@
         {{ partial "blog.html" . }}
       {{ end }} -->
 
+
       <!-- Contact -->
       {{ partial "contact.html" . }}
 
+            <!-- About -->
+            {{ partial "about.html" . }}
     </main>
     {{ partial "footer.html" . }}
     {{ partial "body-bottom" . }}
-    {{ partial "snipcart.html" . }}
+    {{ partial "snipcart" . }}
   </body>
 </html>
