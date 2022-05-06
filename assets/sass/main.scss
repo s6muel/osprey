@@ -309,12 +309,12 @@ textarea {
 }
 
 .snipcart-header {
-  display: flex;
+  //display: flex;
   z-index: 4;
-  //height: 96px;
-  //width: 96px;
-  height: 5vh;
-  width: 5vh;
+  height: 64px;
+  width: 64px;
+  //height: 5vh;
+  //width: 5vh;
   position: fixed;
   bottom: 20px;
   right: 32px;
@@ -322,10 +322,10 @@ textarea {
   //background-color: $accent;
   //background-color: transparentize($white, 1);
   text-align: center;
-  font-size: $vertical-rhythm * 0.5;
+  //font-size: $vertical-rhythm * 0.5;
   box-shadow: 0 4px 10px rgba(0, 0, 0, .4);
   padding-left: 20px;
-  padding-top: 20px;
+  padding-top: 15px;
   padding-bottom: 20px;
   padding-right: 20px;
   transition: .25s;
@@ -340,7 +340,7 @@ textarea {
 }
 
 .bag {
-  object-fit:scale-down;
+  //object-fit:scale-down;
 }
 
 html {
