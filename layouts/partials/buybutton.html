@@ -19,10 +19,10 @@
 
 <button class="snipcart-add-item mainmodal"
 
-    data-item-id="{{ .Site.Params.item_url }}"
+    data-item-id="{{ .Params.productid }}"
     data-item-name="{{ .Params.alt }}"
     data-item-price="{{ .Params.price }}"
-    data-item-url="{{ .Permalink }}"
+    data-item-url="{{ .Site.Params.item_url }}"
     data-item-description="{{ .Params.Title }}"
     data-item-image="/images/{{ .Params.image }}"
     data-item-custom1-name="{{ .Params.custom1_name }}"
