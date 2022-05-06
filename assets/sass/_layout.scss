@@ -40,6 +40,7 @@ header {
   button {
     max-height: $vertical-rhythm * 5;
     box-shadow: -40px 40px 50px -40px rgba(33, 33, 33, 1);
+    //z-index: 13;
   }
 
   img {
@@ -52,6 +53,7 @@ header {
     font-weight: 800;
     padding-top: $vertical-rhythm * 1;
     text-transform: uppercase;
+    margin-bottom: 0vh !important;
   }
 }
 
