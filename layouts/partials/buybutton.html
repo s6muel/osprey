@@ -13,7 +13,7 @@
 </select>
 -->
 <button class="snipcart-add-item mainmodal"
-    data-item-id="{{ .URL }}"
+    data-item-id="#modal-{{ .Scratch.Get "$modalID" }}"
     data-item-name="{{ .Params.alt }}"
     data-item-price="{{ .Params.price }}"
     data-item-url="{{ .Permalink }}"
