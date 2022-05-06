@@ -13,11 +13,14 @@
         <div class="modal-header">
           <div class="modal-header-img-container" {{ if .Params.color }}style="background-color:{{ .Params.color }}"{{ end }}>
             <img {{ if .Site.Params.lazyLoading }}data-src="{{ "images/" | relURL }}{{ .Params.image}}" class="lazyload"{{ else }}src="{{ "images/" | relURL }}{{ .Params.image}}"{{ end }} {{ if .Params.alt }}alt="{{ .Params.alt }}"{{ end }}>
+
           </div>
         </div>
 
         <div class="modal-content">
           <h2>{{ .Params.title }}</h2>
+          {{ partial "buybutton.html" . }}
+<!--
           <button class="snipcart-add-item mainmodal"
               data-item-id="{{ .URL }}"
               data-item-name="{{ .Params.alt }}"
@@ -38,8 +41,23 @@
               data-item-file-guid="{{ .Params.fileguid }}">
           Add to Bag
           </button>
+-->
+          <script>
+const button = document.querySelector('{{ .URL }}')
+const quantity = document.querySelector('#quantity')
+quantity.addEventListener('change', () => {
+  // Sets the default quantity when adding the item
+  button.setAttribute('data-item-quantity', quantity.value)
+})
+const select = document.querySelector('#{{ .Params.custom1_name }}')
+select.addEventListener('change', () => {
+  // Sets the default frame color when adding the item
+  button.setAttribute("data-item-custom1-value", select.value)
+})
+</script>
           <br></br>
           <article class="entry-content">
+
             {{ .Content }}
           </article>
 

@@ -145,7 +145,11 @@ h3 {
 }
 
 .home-logo {
-  margin-bottom: $vertical-rhythm;
+  margin-bottom: $vertical-rhythm * 15;
+
+  &:hover {
+
+  }
 }
 
 .posts-list {
