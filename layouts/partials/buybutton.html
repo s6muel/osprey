@@ -16,13 +16,14 @@
 <!-- modal ID
     data-item-id="{{ .Site.Params.item_url }}#modal-{{ .Scratch.Get "$modalID" }}"
  -->
-<!--data-item-url="{{ .Site.Params.item_url }}"-->
+
+    <!--data-item-file-guid="{{ .Params.fileguid }}"-->
 <button class="snipcart-add-item buy-button mainmodal"
 
     data-item-id="{{ .Params.productid }}"
     data-item-name="{{ .Params.alt }}"
     data-item-price="{{ .Params.price }}"
-
+    data-item-url="{{ .Site.Params.baseURL }}"
     data-item-description="{{ .Params.Title }}"
     data-item-image="/images/{{ .Params.image }}"
     data-item-custom1-name="{{ .Params.custom1_name }}"
@@ -35,7 +36,7 @@
     data-item-custom3-type="textarea"
     data-item-categories="{{ .Params.category }}"
     data-item-shippable="{{ .Params.shippable }}"
-    data-item-file-guid="{{ .Params.fileguid }}"
+
 
 
 
