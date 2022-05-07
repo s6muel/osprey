@@ -6,6 +6,15 @@
     <main>
 
       <section class="blog" id="blog">
+        <a href="{{ .Permalink }}#/cart" class="snipcart-summary-side">
+          <header class="snipcart-header">
+            <div class="snipcart-div">
+              <img class="bag" src="/bag.svg">
+              <!-- <h2>BAG</h2> -->
+              <!-- <span class="snipcart-total-price"></span> -->
+            </div>
+          </header>
+        </a>
         <div class="container">
           <div class="row center-xs">
             <div class="col-xs-12"><h1>{{ humanize .Type }}</h1></div>
@@ -28,5 +37,6 @@
     </main>
     {{ partial "footer.html" . }}
     {{ partial "body-bottom" . }}
+    {{ partial "snipcart" . }}
   </body>
 </html>

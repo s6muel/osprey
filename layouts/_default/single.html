@@ -6,6 +6,15 @@
     <main>
 
       <section class="container">
+        <a href="{{ .Permalink }}#/cart" class="snipcart-summary-side">
+          <header class="snipcart-header">
+            <div class="snipcart-div">
+              <img class="bag" src="/bag.svg">
+              <!-- <h2>BAG</h2> -->
+              <!-- <span class="snipcart-total-price"></span> -->
+            </div>
+          </header>
+        </a>
         <section class="content">
           <h1>{{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}</h1>
 
@@ -14,6 +23,8 @@
             </div>
 
           <article class="entry-content">
+            <img src="/images/{{ .Params.image }}"></img>
+            {{ partial "buybutton.html" . }}
             {{ .Content }}
           </article>
 
@@ -33,5 +44,6 @@
     </main>
     {{ partial "footer.html" . }}
     {{ partial "body-bottom" . }}
+    {{ partial "snipcart" . }}
   </body>
 </html>

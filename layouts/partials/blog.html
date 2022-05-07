@@ -8,6 +8,7 @@
         {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
           <article>
             <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            {{ partial "buybutton.html" . }}
             <div class=sub-header>
               {{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }} · {{ i18n "minuteRead" .ReadingTime }}
             </div>
