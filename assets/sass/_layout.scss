@@ -46,9 +46,9 @@ header {
   }
 
   img {
-    overflow: hidden;
+    //overflow: hidden;
     z-index: 2;
-    max-height: $vertical-rhythm * 15;
+    max-height: $vertical-rhythm * 20;
     box-shadow: -40px 40px 50px -40px rgba(33, 33, 33, 1);
     transition-duration: 0.8s;
 
@@ -62,7 +62,7 @@ header {
   h1 {
     font-family: $font-body;
     font-weight: 800;
-    padding-top: $vertical-rhythm * 1;
+    padding-top: $vertical-rhythm * 10;
     text-transform: uppercase;
     margin-bottom: 0vh !important;
   }

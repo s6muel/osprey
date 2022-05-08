@@ -26,6 +26,13 @@
       display: inline-block;
     }
   }
+
+  header {
+
+    h1 {
+      padding-top: $vertical-rhythm * 3;
+    }
+  }
 }
 
 @media (max-width: 320px) {
@@ -43,6 +50,11 @@
 
     img {
       max-height: $vertical-rhythm * 10 !important;
+    }
+
+    h1 {
+      //padding-top: $vertical-rhythm * 333 !important;
+      //padding-top: $vertical-rhythm * 3;
     }
   }
 }

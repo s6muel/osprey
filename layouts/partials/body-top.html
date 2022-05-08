@@ -42,14 +42,16 @@
               <img {{ if .Site.Params.lazyLoading }}data-src="{{ .Site.Params.latestCover }}" lazyload="on"{{ else }}src="{{ .Site.Params.latestCover }}"{{ end }} alt="{{ .Site.Title }}" class="home-logo {{ if .Site.Params.lazyLoading }}lazyload{{ end }}">
           </button>
 
-        </div>
-      </div>
-      <div class="row middle-xs center-xs">
-        <div class="col-xs-12">
           <h1>{{ .Site.Params.latest }}</h1>
 
         </div>
       </div>
+<!--      <div class="row middle-xs center-xs">
+        <div class="col-xs-12">
+          <h1>{{ .Site.Params.latest }}</h1>
+
+        </div>
+      </div> -->
     </div>
   </header>
 {{ end }}
