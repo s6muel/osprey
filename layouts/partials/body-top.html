@@ -29,7 +29,16 @@
             data-item-description="{{ .Site.Params.item_description }}"
             data-item-image="{{ .Site.Params.latestCover }}"
             data-item-name="{{ .Site.Params.item_name }}"
-            data-item-shippable="{{ .Site.Params.shippablemain }}">
+            data-item-shippable="{{ .Site.Params.shippablemain }}"
+            data-item-custom3-name="Order notes"
+            data-item-custom3-type="textarea"
+            {{ if .Site.Params.max_qty }}
+            data-item-max-quantity="{{ .Site.Params.max_qty }}"
+            {{ end }}
+            {{ if .Site.Params.latestBuyLink }}
+            data-item-file-guid="{{ .Site.Params.latestBuyLink }}"
+            {{ end }}
+            >
               <img {{ if .Site.Params.lazyLoading }}data-src="{{ .Site.Params.latestCover }}" lazyload="on"{{ else }}src="{{ .Site.Params.latestCover }}"{{ end }} alt="{{ .Site.Title }}" class="home-logo {{ if .Site.Params.lazyLoading }}lazyload{{ end }}">
           </button>
 

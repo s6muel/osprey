@@ -20,44 +20,6 @@
         <div class="modal-content">
           <h2>{{ .Params.title }}</h2>
           {{ partial "buybutton.html" . }}
-<!--
-          <button class="snipcart-add-item mainmodal"
-              data-item-id="{{ .URL }}"
-              data-item-name="{{ .Params.alt }}"
-              data-item-price="{{ .Params.price }}"
-              data-item-url="{{ .Permalink }}"
-              data-item-description="{{ .Params.Title }}"
-              data-item-image="/images/{{ .Params.image }}"
-              data-item-custom1-name="{{ .Params.custom1_name }}"
-              data-item-custom1-options="{{ .Params.custom1_opt }}"
-              data-item-custom1-required="{{ .Params.custom1_reqd }}"
-              data-item-custom2-name="{{ .Params.custom2_name }}"
-              data-item-custom2-options="{{ .Params.custom2_opt }}"
-              data-item-custom2-required="{{ .Params.custom2_reqd }}"
-              data-item-custom3-name="Order notes"
-              data-item-custom3-type="textarea"
-              data-item-categories="{{ .Params.category }}"
-              data-item-shippable="{{ .Params.shippable }}"
-              data-item-file-guid="{{ .Params.fileguid }}">
-          Add to Bag
-          </button>
--->
-
-<!--
-            <script>
-const button = document.querySelector('{{ .URL }}')
-const quantity = document.querySelector('#quantity')
-quantity.addEventListener('change', () => {
-  // Sets the default quantity when adding the item
-  button.setAttribute('data-item-quantity', quantity.value)
-})
-const select = document.querySelector('#{{ .Params.custom1_name }}')
-select.addEventListener('change', () => {
-  // Sets the default frame color when adding the item
-  button.setAttribute("data-item-custom1-value", select.value)
-})
-</script>
--->
           <br></br>
           <article class="entry-content">
 

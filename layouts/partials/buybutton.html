@@ -1,23 +1,12 @@
 
-<h4>&pound;{{ .Params.price }}</h4>
-
-<!--
-<label>Quantity</label>
-<input id="quantity" type="number"></input>
-<label>{{ .Params.custom2_name }}</label>
-<select id="{{ .Params.custom2_name }}">
-
-  <option value="Black">{{ .Params.custom2_opt }}</option>
-  <option value="Brown">{{ .Params.custom2_opt }}</option>
-  <option value="Gold">Gold</option>
-</select>
--->
+<p>&pound;{{ .Params.price }} &#43 shipping &amp; taxes.</p>
 
 <!-- modal ID
     data-item-id="{{ .Site.Params.item_url }}#modal-{{ .Scratch.Get "$modalID" }}"
  -->
 
     <!--data-item-file-guid="{{ .Params.fileguid }}"-->
+
 <button class="snipcart-add-item buy-button mainmodal"
 
     data-item-id="{{ .Params.productid }}"
@@ -26,19 +15,50 @@
     data-item-url="{{ .Site.Params.baseURL }}"
     data-item-description="{{ .Params.Title }}"
     data-item-image="/images/{{ .Params.image }}"
+
+{{ if .Params.custom1_name }}
     data-item-custom1-name="{{ .Params.custom1_name }}"
+{{ end }}
+
+{{ if .Params.custom1_opt }}
     data-item-custom1-options="{{ .Params.custom1_opt }}"
+{{ end }}
+
+{{ if .Params.custom1_reqd }}
     data-item-custom1-required="{{ .Params.custom1_reqd }}"
+{{ end }}
+
+{{ if .Params.custom2_name }}
     data-item-custom2-name="{{ .Params.custom2_name }}"
+{{ end }}
+
+{{ if .Params.custom2_opt }}
     data-item-custom2-options="{{ .Params.custom2_opt }}"
+{{ end }}
+
+{{ if .Params.custom2_reqd }}
     data-item-custom2-required="{{ .Params.custom2_reqd }}"
+{{ end }}
+
     data-item-custom3-name="Order notes"
+
     data-item-custom3-type="textarea"
+
+{{ if .Params.category }}
     data-item-categories="{{ .Params.category }}"
+{{ end }}
+
+{{ if .Params.shippable }}
     data-item-shippable="{{ .Params.shippable }}"
+{{ end }}
 
+{{ if .Params.fileguid }}
+    data-item-file-guid="{{ .Params.fileguid }}"
+{{ end }}
 
-
+{{ if .Params.stackable }}
+    data-item-stackable="{{ .Params.stackable }}"
+{{ end }}
 
     >
 Add to Bag
