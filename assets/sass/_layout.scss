@@ -38,13 +38,16 @@ header {
   }
 
   button {
-    max-height: $vertical-rhythm * 5;
+    max-height: $vertical-rhythm * 15;
+    background: 0;
     //box-shadow: -40px 40px 50px -40px rgba(33, 33, 33, 1);
-    //z-index: 13;
+    z-index: 1;
 
   }
 
   img {
+    overflow: hidden;
+    z-index: 2;
     max-height: $vertical-rhythm * 15;
     box-shadow: -40px 40px 50px -40px rgba(33, 33, 33, 1);
     transition-duration: 0.8s;
